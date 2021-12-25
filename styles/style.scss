@@ -12,6 +12,7 @@ $black: #000;
 $white: #fff;
 $gray: #333;
 $lightBrown: #f2f0ed;
+$darkBrown: #9a8c7e;
 $red: #af005f;
 
 @mixin grid($val) {
@@ -32,6 +33,32 @@ body {
 
 /* 
 ========================================
+Headings
+========================================
+*/
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+/* 
+========================================
 Header
 ========================================
 */
@@ -45,7 +72,7 @@ header {
   z-index: 100;
   width: 100%;
 
-  background: $white;
+  background-color: $white;
   padding: 1rem;
 
   display: flex;
@@ -81,7 +108,7 @@ nav {
     display: block;
     background: $lightBrown;
     color: $gray;
-    padding: 0.5rem;
+    padding: 1rem;
     font-weight: 300;
     &:hover {
       text-decoration: underline;
@@ -125,6 +152,63 @@ nav {
 
 /* 
 ========================================
+Main
+========================================
+*/
+
+.background-image {
+  height: 100vh;
+  width: 100%;
+
+  display: inline-block;
+
+  img {
+    width: 100%;
+    min-height: 500px;
+    height: 92%;
+    z-index: 0;
+
+    object-fit: cover;
+    display: block;
+    filter: grayscale(0.5);
+    opacity: 0.9;
+    filter: brightness(60%);
+  }
+
+  .background-image__footer {
+    height: 8%;
+    background-color: $darkBrown;
+  }
+}
+
+article {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.console {
+  position: absolute;
+  color: $white;
+  width: 90%;
+  z-index: 5;
+  background: transparent;
+  top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1,
+  h2 {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}
+
+/* 
+========================================
 Media Queries
 ========================================
 */
@@ -133,7 +217,7 @@ Media Queries
 }
 @media (min-width: 768px) {
   header {
-    width: 80%;
+    padding: 1rem 10%;
   }
   .btn--menu {
     display: none;
@@ -157,6 +241,6 @@ Media Queries
 }
 @media (min-width: 1200px) {
   header {
-    width: 70%;
+    padding: 1rem 20%;
   }
 }
