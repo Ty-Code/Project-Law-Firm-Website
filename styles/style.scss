@@ -64,16 +64,17 @@ Header
 */
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 100;
   width: 100%;
+  height: 70px;
 
   background-color: $white;
-  padding: 1rem;
+  padding: 0 1rem;
 
   display: flex;
   align-items: center;
@@ -156,29 +157,99 @@ Main
 ========================================
 */
 
-.background-image {
-  height: 100vh;
+/* 
+========================================
+Carousel
+========================================
+*/
+
+.carousel {
+  position: relative;
+  height: 100%;
+  min-height: calc(100vh - 140px);
+  width: 100%;
+}
+
+.carousel__track-container {
+  position: relative;
+  height: inherit;
+  min-height: inherit;
+  overflow: hidden;
+
+}
+
+.carousel__track {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: inherit;
+  min-height: inherit;
+  transition: transform 250ms ease-in;
+
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__image {
+  width: 100%;
+  min-height: 500px;
+  z-index: 0;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+  filter: grayscale(0.5);
+  opacity: 0.9;
+  filter: brightness(60%);
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: transparent;
+  color: $darkBrown;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.carousel__button--left {
+  left: 10px;
+}
+
+.carousel__button--right {
+  right: 10px;
+}
+
+.carousel__nav {
+  position: absolute;
+  bottom: 2rem;
   width: 100%;
 
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.carousel__indicator {
+  background: $darkBrown;
+  width: 70px;
+  height: 5px;
+  cursor: pointer;
+}
+.carousel__indicator.current-slide {
+  background: $red;
+}
 
-  img {
-    width: 100%;
-    min-height: 500px;
-    height: 92%;
-    z-index: 0;
-
-    object-fit: cover;
-    display: block;
-    filter: grayscale(0.5);
-    opacity: 0.9;
-    filter: brightness(60%);
-  }
-
-  .background-image__footer {
-    height: 8%;
-    background-color: $darkBrown;
-  }
+.carousel__track-footer {
+  width: 100%;
+  height: 70px;
+  background-color: $darkBrown;
 }
 
 article {
@@ -207,6 +278,10 @@ article {
   }
 }
 
+.is-hidden {
+  display: none;
+}
+
 /* 
 ========================================
 Media Queries
@@ -217,7 +292,7 @@ Media Queries
 }
 @media (min-width: 768px) {
   header {
-    padding: 1rem 10%;
+    padding: 0.7rem 10%;
   }
   .btn--menu {
     display: none;
@@ -238,9 +313,13 @@ Media Queries
       }
     }
   }
+  .carousel__indicator {
+    width: 80px;
+    height: 8px;
+  }
 }
 @media (min-width: 1200px) {
   header {
-    padding: 1rem 20%;
+    padding: 0.7rem 20%;
   }
 }

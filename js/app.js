@@ -1,3 +1,9 @@
+/* 
+========================================
+Menu and Search Bar
+========================================
+*/
+
 const searchBtn = document.querySelector('.btn--search');
 const searchForm = document.querySelector('.search-form');
 
@@ -18,3 +24,9 @@ window.onscroll = () => {
   searchForm.classList.remove('active');
   nav.classList.remove('active');
 };
+
+/* 
+========================================
+Carousel Slide
+========================================
+*/

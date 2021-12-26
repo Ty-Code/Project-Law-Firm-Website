@@ -52,15 +52,17 @@ Header
 ========================================
 */
 header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
   z-index: 100;
   width: 100%;
+  height: 70px;
   background-color: #fff;
-  padding: 1rem;
+  padding: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,17 +158,50 @@ nav a:hover {
 Main
 ========================================
 */
-.background-image {
-  height: 100vh;
+/* 
+========================================
+Carousel
+========================================
+*/
+.carousel {
+  position: relative;
+  height: 100%;
+  min-height: calc(100vh - 140px);
   width: 100%;
-  display: inline-block;
 }
 
-.background-image img {
+.carousel__track-container {
+  position: relative;
+  height: inherit;
+  min-height: inherit;
+  overflow: hidden;
+}
+
+.carousel__track {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  height: inherit;
+  min-height: inherit;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__image {
   width: 100%;
   min-height: 500px;
-  height: 92%;
   z-index: 0;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
@@ -177,8 +212,53 @@ Main
           filter: brightness(60%);
 }
 
-.background-image .background-image__footer {
-  height: 8%;
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: transparent;
+  color: #9a8c7e;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.carousel__button--left {
+  left: 10px;
+}
+
+.carousel__button--right {
+  right: 10px;
+}
+
+.carousel__nav {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.carousel__indicator {
+  background: #9a8c7e;
+  width: 70px;
+  height: 5px;
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background: #af005f;
+}
+
+.carousel__track-footer {
+  width: 100%;
+  height: 70px;
   background-color: #9a8c7e;
 }
 
@@ -219,6 +299,10 @@ article {
   padding-bottom: 5px;
 }
 
+.is-hidden {
+  display: none;
+}
+
 /* 
 ========================================
 Media Queries
@@ -226,7 +310,7 @@ Media Queries
 */
 @media (min-width: 768px) {
   header {
-    padding: 1rem 10%;
+    padding: 0.7rem 10%;
   }
   .btn--menu {
     display: none;
@@ -250,11 +334,15 @@ Media Queries
   nav a:hover {
     text-underline-offset: 1rem;
   }
+  .carousel__indicator {
+    width: 80px;
+    height: 8px;
+  }
 }
 
 @media (min-width: 1200px) {
   header {
-    padding: 1rem 20%;
+    padding: 0.7rem 20%;
   }
 }
 /*# sourceMappingURL=style.css.map */
