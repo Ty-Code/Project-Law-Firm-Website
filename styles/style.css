@@ -26,22 +26,22 @@ Headings
 ========================================
 */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 100;
-}
-
-h3 {
   font-size: 1.5rem;
   font-weight: 100;
 }
 
+h3 {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
 h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   padding-bottom: 15px;
 }
@@ -167,6 +167,7 @@ Carousel
   position: relative;
   height: 100%;
   min-height: calc(100vh - 140px);
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -184,10 +185,10 @@ Carousel
   list-style: none;
   height: inherit;
   min-height: inherit;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+  -webkit-transition: -webkit-transform ease-in;
+  transition: -webkit-transform ease-in;
+  transition: transform ease-in;
+  transition: transform ease-in, -webkit-transform ease-in;
 }
 
 .carousel__slide {
@@ -195,6 +196,12 @@ Carousel
   top: 0;
   bottom: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .carousel__image {
@@ -262,19 +269,7 @@ Carousel
   background-color: #9a8c7e;
 }
 
-article {
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.console {
+.carousel__text {
   position: absolute;
   color: #fff;
   width: 90%;
@@ -293,8 +288,8 @@ article {
           align-items: center;
 }
 
-.console h1,
-.console h2 {
+.carousel__text h1,
+.carousel__text h2 {
   text-align: center;
   padding-bottom: 5px;
 }
@@ -309,6 +304,12 @@ Media Queries
 ========================================
 */
 @media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
   header {
     padding: 0.7rem 10%;
   }
