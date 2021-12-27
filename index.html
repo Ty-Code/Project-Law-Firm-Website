@@ -22,7 +22,7 @@
     <!-- ************** Header *************** -->
     <header>
       <figure>
-        <img id="logo" src="images/ybk-new-logo.png" alt="firm logo" />
+        <a href="#carousel"><img id="logo" src="images/ybk-new-logo.png" alt="firm logo" /></a>
       </figure>
 
       <nav>
@@ -38,14 +38,14 @@
       </div>
 
       <form action="" class="search-form">
-        <input id="search-box" type="search" placeholder="" />
+        <input id="search-box" type="search" placeholder="Ara..." />
         <label for="search-box"></label>
       </form>
     </header>
 
     <main>
       <!-- ************** Carousel *************** -->
-      <div class="carousel">
+      <div id="carousel" class="carousel">
         <button class="carousel__button carousel__button--left is-hidden">
           <i class="fa fa-chevron-left" aria-hidden="true"></i>
         </button>
@@ -147,12 +147,14 @@
 
       <!-- ************** About Us Section *************** -->
       <section class="about-section">
-        <div class="about__box">
-          <ul class="about__list">
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-          </ul>
+        <div class="about__container">
+          <div class="about__box">
+            <ul class="about__list">
+              <li>item1</li>
+              <li>item2</li>
+              <li>item3</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -166,14 +168,16 @@
           allowfullscreen=""
           loading="lazy"
         ></iframe>
-        <div class="contact-box">
-          <div class="contact-box__text">
-            <h3>YBK Hukuk</h3>
-            <p>Istanbul</p>
+        <div class="contact__container">
+          <div class="contact__box">
+            <div class="contact__text">
+              <h3>YBK Hukuk</h3>
+              <p>Istanbul</p>
+            </div>
           </div>
         </div>
       </section>
-<!-- ************** Social Media Section *************** -->
+      <!-- ************** Social Media Section *************** -->
       <section class="social-media-section">
         <div class="social-media__container">
           <div class="social-media__box">
@@ -188,14 +192,19 @@
           <div class="social-media__box">
             <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
           </div>
-          <div class="social-media__box">
-            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          </div>
         </div>
       </section>
+      <!-- ************** Footer *************** -->
 
-
-
+      <footer class="footer">
+        <div class="footer__container">
+          <a href="#">&nbsp Legal notices </a>
+          <a href="#">&nbsp Attorney advertising </a>
+          <a href="#">&nbsp Scam alerts </a>
+          <a href="#">&nbsp Privacy </a>
+          <a href="#">&nbsp Accessibility </a>
+        </div>
+      </footer>
     </main>
 
     <script src="js/app.js"></script>
