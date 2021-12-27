@@ -396,7 +396,7 @@ About Section
 .about-section {
   height: 450px;
   width: 100vw;
-  background-image: src('./images/crossroads.jpg');
+  background-image: url(/images/crossroads.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -415,7 +415,7 @@ About Section
   width: 300px;
   height: 250px;
   background: $white;
-  color: $red;
+  color: $black;
   padding: 40px;
   display: flex;
 }
