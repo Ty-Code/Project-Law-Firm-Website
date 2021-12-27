@@ -356,7 +356,11 @@ News Section
     padding-bottom: 20px;
     font-weight: bold;
 
-    &: ;
+    &:hover {
+      cursor: pointer;
+      color: $red;
+      transition-duration: 300ms;
+    }
   }
   span i {
     color: $red;
@@ -392,7 +396,7 @@ About Section
 .about-section {
   height: 450px;
   width: 100vw;
-  background-image: url(/images/crossroads.jpg);
+  background-image: url('/images/crossroads.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;

@@ -398,6 +398,13 @@ News Section
   font-weight: bold;
 }
 
+.thumbnail-box__article span:hover {
+  cursor: pointer;
+  color: #af005f;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
 .thumbnail-box__article span i {
   color: #af005f;
 }
@@ -430,7 +437,7 @@ About Section
 .about-section {
   height: 450px;
   width: 100vw;
-  background-image: url(/images/crossroads.jpg);
+  background-image: url("/images/crossroads.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
