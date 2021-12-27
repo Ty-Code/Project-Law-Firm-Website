@@ -48,13 +48,19 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 400;
   padding-bottom: 15px;
+}
+
+h5 {
+  font-size: 0.7rem;
+  font-weight: 300;
+  padding-bottom: 5px;
 }
 
 /* 
@@ -153,12 +159,6 @@ nav {
 
 /* 
 ========================================
-Main
-========================================
-*/
-
-/* 
-========================================
 Carousel
 ========================================
 */
@@ -167,9 +167,8 @@ Carousel
   position: relative;
   height: 100%;
   min-height: calc(100vh - 140px);
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
-  
 }
 
 .carousel__track-container {
@@ -177,7 +176,6 @@ Carousel
   height: inherit;
   min-height: inherit;
   overflow: hidden;
-
 }
 
 .carousel__track {
@@ -188,7 +186,6 @@ Carousel
   height: inherit;
   min-height: inherit;
   transition: transform ease-in;
-
 }
 
 .carousel__slide {
@@ -196,7 +193,7 @@ Carousel
   top: 0;
   bottom: 0;
   width: 100%;
-  
+
   display: flex;
   justify-content: center;
 }
@@ -263,16 +260,19 @@ Carousel
   width: 90%;
   z-index: 5;
   background: transparent;
-  top: 100px;
+  top: 50px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
 
   h1,
   h2 {
     text-align: center;
     padding-bottom: 5px;
+  }
+  span {
+    margin-top: 30px;
+    font-size: 1rem;
   }
 }
 
@@ -282,19 +282,220 @@ Carousel
 
 /* 
 ========================================
+News Section
+========================================
+*/
+.news-section {
+  background-color: $lightBrown;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thumbnail-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+.thumbnail-box {
+  position: relative;
+  grid-column: span 6;
+  height: 100%;
+  min-height: 400px;
+
+  background-color: $white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail-box__img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.thumbnail-box__img img {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.thumbnail-box__article {
+  padding: 15px;
+  flex: 1;
+  height: min-content;
+
+  display: block;
+  h3 {
+    color: $red;
+    padding-bottom: 25px;
+  }
+  p {
+    padding: 20px 0;
+  }
+  span {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  span i {
+    color: $red;
+  }
+}
+
+.news-section__btn {
+  left: 0;
+  right: 0;
+  margin: 3rem auto 0 auto;
+
+  padding: 10px 12px;
+  color: #fff;
+
+  background-color: $darkBrown;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+
+  &:hover {
+    background-color: $white;
+    color: $darkBrown;
+    transition-duration: 300ms;
+    cursor: pointer;
+  }
+}
+
+/* 
+========================================
+About Section
+========================================
+*/
+.about-section {
+  height: 450px;
+  background-image: url(/images/crossroads.jpg);
+  background-position: center;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+.about__box {
+  justify-self: center;
+  grid-row: 5;
+  grid-column: 3/5;
+  width: 300px;
+  height: 250px;
+  background: $white;
+  color: $red;
+  padding: 15%;
+  display: flex;
+}
+
+/* 
+========================================
+Contact Section
+========================================
+*/
+
+.contact-section {
+  position: relative;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  iframe {
+    grid-column: span 6;
+    z-index: 0;
+    width: 100%;
+    filter: grayscale(1);
+    opacity: 0.8;
+  }
+}
+.contact-box {
+  position: absolute;
+  justify-self: end;
+  align-self: end;
+  z-index: 1;
+  height: 200px;
+  width: 200px;
+  background: $red;
+
+  display: flex;
+}
+
+.contact-box__text {
+  padding: 20px;
+  width: 95%;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* 
+========================================
+Social Media Section
+========================================
+*/
+
+.social-media-section{
+  width: 100%;
+  height: ;
+  background: $darkBrown
+}
+.social-media-container {
+
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-media-box a {
+  color: #f4f4f4;
+  height: 48px;
+  width: 48px;
+
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-container a:hover {
+  background-color: rgb(99, 99, 99);
+  transition-duration: 300ms;
+}
+
+/* 
+========================================
 Media Queries
 ========================================
 */
 
 @media (min-width: 480px) {
+  .about__box {
+    width: 450px;
+    height: 250px;
+  }
+
+  .contact-box {
+    height: 300px;
+    width: 200px;
+  }
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
-  
+
   h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   header {
@@ -323,9 +524,86 @@ Media Queries
     width: 80px;
     height: 8px;
   }
+
+  .thumbnail-container {
+    width: 90%;
+  }
+
+  .thumbnail-box {
+    grid-column: span 2;
+    min-height: 600px;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .thumbnail-box__link {
+    margin-right: 60px;
+    width: max-content;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  .about__box {
+    justify-self: end;
+    grid-row: 3/5;
+    grid-column: 5;
+    width: 350px;
+    height: 300px;
+    background: $white;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 0.7rem 15%;
+  }
+  .thumbnail-container {
+    width: 75%;
+  }
+  .contact-box {
+    top: 90px;
+    justify-self: auto;
+    grid-column: 5 / auto;
+    z-index: 1;
+    height: 350px;
+    width: 300px;
+    background: $red;
+  }
 }
 @media (min-width: 1200px) {
   header {
-    padding: 0.7rem 20%;
+    padding: 0.7rem 22%;
+  }
+
+  .carousel__text {
+    width: 70%;
+    background: transparent;
+    top: 25%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    h1,
+    h2,
+    span {
+      grid-column: 2/3;
+      text-align: left;
+      justify-self: start;
+    }
+  }
+
+  .thumbnail-container {
+    width: 60%;
+  }
+
+  .about__box {
+    justify-self: end;
+    grid-row: 3/5;
+    grid-column: 5;
+    width: 450px;
+    height: 350px;
+    background: $white;
   }
 }

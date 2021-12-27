@@ -24,9 +24,3 @@ window.onscroll = () => {
   searchForm.classList.remove('active');
   nav.classList.remove('active');
 };
-
-/* 
-========================================
-Carousel Slide
-========================================
-*/
