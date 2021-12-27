@@ -436,7 +436,7 @@ About Section
 */
 .about-section {
   height: 400px;
-  width: 100vw;
+  width: 100%;
   background-image: url(/images/crossroads.jpg);
   background-size: cover;
   display: -webkit-box;
@@ -478,7 +478,7 @@ Contact Section
 */
 .contact-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   display: -ms-grid;
   display: grid;
 }
@@ -803,7 +803,7 @@ Media Queries
     width: 55%;
   }
   .contact__box {
-    width: 350px;
+    width: 320px;
   }
   .social-media__container {
     width: 55%;
