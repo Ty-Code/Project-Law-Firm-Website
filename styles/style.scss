@@ -394,7 +394,7 @@ About Section
 ========================================
 */
 .about-section {
-  height: 450px;
+  height: 400px;
   width: 100vw;
   background-image: url(/images/crossroads.jpg);
   background-size: cover;
@@ -404,9 +404,9 @@ About Section
 }
 
 .about__container {
-  height: 100%;
+  height: 95%;
   display: grid;
-  margin-bottom: 30px;
+  padding-bottom: 25px;
 }
 .about__box {
   justify-self: center;
@@ -596,9 +596,6 @@ Media Queries
     width: 90%;
   }
 
-  .about__container {
-    width: 90%;
-  }
   .thumbnail-box {
     grid-column: span 2;
     min-height: 600px;
@@ -614,7 +611,10 @@ Media Queries
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
   }
-
+  .about__container {
+    width: 90%;
+    padding-bottom: 0px;
+  }
   .about__box {
     justify-self: end;
     align-self: center;
@@ -644,6 +644,7 @@ Media Queries
 
   .about__container {
     width: 75%;
+    
   }
   .about__box {
     width: 450px;
