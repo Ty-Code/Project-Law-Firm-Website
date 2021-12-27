@@ -437,7 +437,7 @@ About Section
 .about-section {
   height: 450px;
   width: 100vw;
-  background-image: url(/images/crossroads.jpg);
+  background-image: url("https://github.com/Ty-Code/Project-lawfirm-website/blob/main/images/crossroads.jpg");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
