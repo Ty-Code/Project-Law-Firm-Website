@@ -1,5 +1,8 @@
 # Project-lawfirm-website
 
+This project will be a fully-fledged website.
+
+* I builded a carousel with pure js from scratch.
 
 
 ![](https://img.shields.io/badge/Code-HTML-informational?style=flat-square&logo=html5&logoColor=white&color=blue)
