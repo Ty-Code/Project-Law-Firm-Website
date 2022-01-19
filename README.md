@@ -2,7 +2,8 @@
 
 This project will be a fully-fledged website.
 
-* I builded a carousel with pure js from scratch.
+* in order to set up a responsive layout, both grid and flexbox models were used in various combinations.
+* builded a carousel at the homepage with pure js from scratch.
 
 
 ![](https://img.shields.io/badge/Code-HTML-informational?style=flat-square&logo=html5&logoColor=white&color=blue)
