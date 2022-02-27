@@ -332,6 +332,9 @@ News Section
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .thumbnail-container {
@@ -342,14 +345,19 @@ News Section
       grid-template-columns: repeat(6, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-  grid-gap: 30px;
+  grid-gap: 20px;
+  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .thumbnail-box {
   position: relative;
   grid-column: span 6;
   height: 100%;
-  min-height: 400px;
+  height: 800px;
+  max-width: 600px;
   background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -661,7 +669,7 @@ Media Queries
     font-size: 1.9rem;
   }
   header {
-    padding: 0.7rem 10%;
+    padding: 0.7rem 1%;
   }
   .btn--menu {
     display: none;
@@ -689,12 +697,8 @@ Media Queries
     width: 80px;
     height: 8px;
   }
-  .thumbnail-container {
-    width: 90%;
-  }
   .thumbnail-box {
     grid-column: span 2;
-    min-height: 600px;
     max-width: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -746,10 +750,10 @@ Media Queries
 
 @media (min-width: 992px) {
   header {
-    padding: 0.7rem 15%;
+    padding: 0.7rem 5%;
   }
   .thumbnail-container {
-    width: 75%;
+    width: 95%;
   }
   .about__container {
     width: 75%;
@@ -769,7 +773,7 @@ Media Queries
 
 @media (min-width: 1200px) {
   header {
-    padding: 0.7rem 22%;
+    padding: 0.7rem 10%;
   }
   .carousel__text {
     width: 70%;
@@ -791,7 +795,7 @@ Media Queries
         justify-self: start;
   }
   .thumbnail-container {
-    width: 60%;
+    width: 90%;
   }
   .about__container {
     width: 55%;
@@ -821,6 +825,24 @@ Media Queries
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  header {
+    padding: 0.7rem 15%;
+  }
+  .thumbnail-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 2100px) {
+  header {
+    padding: 0.7rem 20%;
+  }
+  .thumbnail-container {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */

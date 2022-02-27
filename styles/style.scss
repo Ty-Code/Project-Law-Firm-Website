@@ -304,6 +304,7 @@ News Section
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .thumbnail-container {
@@ -311,14 +312,17 @@ News Section
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
-  grid-gap: 30px;
+  grid-gap: 20px;
+  justify-items: center;
+  justify-content: center;
 }
 
 .thumbnail-box {
   position: relative;
   grid-column: span 6;
   height: 100%;
-  min-height: 400px;
+  height: 800px;
+  max-width: 600px;
 
   background-color: $white;
 
@@ -566,7 +570,7 @@ Media Queries
   }
 
   header {
-    padding: 0.7rem 10%;
+    padding: 0.7rem 1%;
   }
   .btn--menu {
     display: none;
@@ -592,13 +596,8 @@ Media Queries
     height: 8px;
   }
 
-  .thumbnail-container {
-    width: 90%;
-  }
-
   .thumbnail-box {
     grid-column: span 2;
-    min-height: 600px;
     max-width: 400px;
 
     display: flex;
@@ -636,10 +635,10 @@ Media Queries
 
 @media (min-width: 992px) {
   header {
-    padding: 0.7rem 15%;
+    padding: 0.7rem 5%;
   }
   .thumbnail-container {
-    width: 75%;
+    width: 95%;
   }
 
   .about__container {
@@ -660,7 +659,7 @@ Media Queries
 }
 @media (min-width: 1200px) {
   header {
-    padding: 0.7rem 22%;
+    padding: 0.7rem 10%;
   }
 
   .carousel__text {
@@ -681,7 +680,7 @@ Media Queries
   }
 
   .thumbnail-container {
-    width: 60%;
+    width: 90%;
   }
   .about__container {
     width: 55%;
@@ -704,5 +703,22 @@ Media Queries
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  header {
+    padding: 0.7rem 15%;
+  }
+  .thumbnail-container {
+    width: 70%;
+  }
+}
+@media (min-width: 2100px) {
+  header {
+    padding: 0.7rem 20%;
+  }
+  .thumbnail-container {
+    width: 50%;
   }
 }
