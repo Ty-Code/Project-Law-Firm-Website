@@ -332,16 +332,41 @@ CV Box
 
 .cv-box__article {
   display: none;
-  list-style-position: inside;
+  line-height: 1rem;
+}
+
+.cv-box__article ul {
+  list-style: none;
+}
+
+.cv-box__article ul li {
+  margin-bottom: 1rem;
+}
+
+.cv-box__article ul:last-of-type {
+  padding-bottom: 30px;
+}
+
+.cv-box__article ul:last-of-type li {
+  display: inline;
 }
 
 .cv-box__article h2 {
-  margin: 30px 0 5px 0;
+  margin: 30px 0;
 }
 
 .cv-box__article h3 {
   margin: 20px 0;
   border-bottom: 1px solid gray;
+}
+
+.cv-box__article p {
+  padding: 0;
+  margin: 0;
+}
+
+.cv-box__article span {
+  margin-bottom: 20px;
 }
 
 .cv-box__article.active {
@@ -352,7 +377,7 @@ CV Box
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* 
@@ -469,6 +494,9 @@ Media Queries
 ========================================
 */
 @media (min-width: 480px) {
+  .cv-box__article.active {
+    padding: 30px;
+  }
   .contact__box {
     height: 300px;
     width: 200px;
@@ -520,6 +548,9 @@ Media Queries
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .cv-box {
+    width: 100%;
   }
   .contact__container {
     -ms-grid-column-align: center;

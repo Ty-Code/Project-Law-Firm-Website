@@ -1,6 +1,6 @@
 export const articleData = [
   {
-    date: '08.03.2022',
+    date: 'February 2022',
     title: 'European Data Strategy: What Organizations Need to Know?',
     text: `<p>Organizations have an incredible amount of data about customers, suppliers and preventing data flow does not seem possible in today&rsquo;s conditions. For this reason, it is necessary to determine the processes, procedures, policies, roles and standards within the organization that ensure the effective use of data in order for an organization to achieve its aims. This can only be achieved through data governance policy. Data governance ensures that data-related roles are clearly defined and that responsibility and accountability are agreed upon across the organization. In this regard, organizations should consider regulations on data governance that are currently in effect or are under preparation. Besides General Data Protection Regulation (&ldquo;GDPR&rdquo;), European Union data framework provides a source of inspiration to organizations adopting legal measures in certain areas.&nbsp;</p>
     <p>One of those regulations is Data Governance Act(&ldquo;DGA&rdquo;), presented to European Commission for the first time in 2020. The Data Governance Act realizes that data obtained from public sector bodies can be reused for commercial purposes or even be provided for a reasonable and proportionate price. With that awareness, the DGA will create a mechanism to enable the safe reuse of certain categories of public-sector data that are subject to the rights of others. It applies to data held by public sector bodies which are protected on the grounds of commercial confidentiality, statistical confidentiality, protection of intellectual property rights of third parties, protection of personal data.</p>
@@ -47,7 +47,7 @@ export const articleData = [
     Writer: 'Salim Serdar YAĞCI',
   },
   {
-    date: '07.03.2022',
+    date: 'February 2022',
     title: 'Key Actions to Drive Compliance with AI Regulations',
     text: `<p>Over the last few years, artificial intelligence (AI) has started to appear in many areas in business life. Recently, companies have adapted to the digital world with the use of big data and AI, in this sense, many operations are carried out by using algorithmic systems.&nbsp;</p>
     <p>All these and many more other aspects lead companies to invest in AI systems growingly in order to gain a competitive advantage. The widespread use of AI requires the establishment of a compliance program - one that addresses not only keeping up with the technological developments but also with the relevant legal obligations. AI systems may cause serious risks for companies including the emergence of disputes and legal violations which highlights the importance of the existence of a compliance program. Due to the risks posed by certain AI systems, compliance programs should have a detailed, multi-layered approach and seek balance between company&apos;s expectations and legal requirements.</p>
@@ -80,11 +80,11 @@ export const articleData = [
     </ol>
     <p>Compliance with AI regulations requires a long-term effort. The most facilitating factor in this process will be the awareness of the employees. A well-prepared compliance programme alone is not sufficient to ensure effective compliance. Employees should also have awareness to adapt to this. For this reason, a checklist regarding the actions to be taken should be prepared and provided to the employees. Periodic training for the employees on AI systems, related obligations and legal regulations and ethical use of AI systems should be ensured.</p>
     <p><br></p>`,
-    Writer: 'Salim Serdar YAĞCI',
+    Writer: 'A. Cenk KONUKPAY',
   },
 
   {
-    date: '09.03.2022',
+    date: 'February 2022',
     title: 'Commercialization of NFT: Copyrights?',
     text: `<p>The commercialization of non-fungible token (&ldquo;NFT&rdquo;) is made through a smart contract which prevents making indiscriminate use of the token. The contract establishes all the terms regarding the use of the NFT by the purchaser. Many equate this exclusive form of ownership (of NFT) with ownership of the intellectual and artistic work (&ldquo;work&rdquo;) itself, but the distinction must be emphasized. Does the purchaser (or the minter) of an NFT own the intellectual property rights to the work associated with an NFT? The misconception goes further in case the work represented in the token has already been protected by intellectual property (IP), such as copyright.&nbsp;</p>
     <p>The NFT minter or purchaser owns nothing more than a transactional record and a cryptographic hyperlink to the file, which guarentees authenticity to buyers of intellectual and artistic work through its lack of fungibility unlike other cryptographic assets such as Bitcoin, whose ownership is tracked through the blockchain technology. However, the ownership of an NFT does not entitle the owner to the ownership of the work associated with the token. Even if the regulation of NFTs is not yet a reality;</p>
@@ -98,6 +98,6 @@ export const articleData = [
     </ol>
     <p>As can be seen, due to the increasing importance of the aforementioned tokens, it is important to determine the rules regarding the use of such new technologies within the scope of Intellectual Property Law. For this reason, it is clear that there is a need for a special legal regulation for NFTs and their use.</p>
     <p><br>&nbsp;</p>`,
-    Writer: 'Salim Serdar YAĞCI',
+    Writer: 'Efe Murat BULUT',
   },
 ];
