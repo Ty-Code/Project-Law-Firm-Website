@@ -13,7 +13,7 @@ $white: #fff;
 $gray: #333;
 $lightBrown: #f2f0ed;
 $darkBrown: #9a8c7e;
-$red: #af005f;
+$red: #ae0404;
 
 @mixin grid($val) {
   display: grid;
@@ -38,12 +38,12 @@ Headings
 */
 h1 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 h3 {
@@ -89,6 +89,7 @@ header {
 
 #logo {
   cursor: pointer;
+  width: 200px;
 }
 
 .btn--icon {
@@ -209,9 +210,8 @@ Carousel
 
   object-fit: cover;
   display: block;
-  filter: grayscale(0.5);
   opacity: 0.9;
-  filter: brightness(60%);
+  filter: brightness(30%);
 }
 
 .carousel__button {
@@ -248,7 +248,7 @@ Carousel
 }
 .carousel__indicator {
   background: $darkBrown;
-  width: 70px;
+  width: 50px;
   height: 5px;
   cursor: pointer;
 }
@@ -268,7 +268,7 @@ Carousel
   width: 90%;
   z-index: 5;
   background: transparent;
-  top: 50px;
+  top: 140px;
 
   display: grid;
   justify-items: center;
@@ -278,10 +278,12 @@ Carousel
     text-align: center;
     padding-bottom: 5px;
   }
-  span {
+  a {
+    display: block;
     margin-top: 30px;
     font-size: 1rem;
     cursor: pointer;
+    color: $white;
     &:hover {
       color: $red;
       transition-duration: 200ms;
@@ -320,8 +322,7 @@ News Section
 .thumbnail-box {
   position: relative;
   grid-column: span 6;
-  height: 100%;
-  height: 800px;
+  height: 500px;
   max-width: 600px;
 
   background-color: $white;
@@ -337,14 +338,14 @@ News Section
 
 .thumbnail-box__img img {
   width: 100%;
+  height: 150px;
+  object-fit: cover;
   padding-bottom: 10px;
 }
 
 .thumbnail-box__article {
   padding: 15px;
   flex: 1;
-  height: min-content;
-
   display: block;
   h3 {
     color: $red;
@@ -352,8 +353,11 @@ News Section
   }
   p {
     padding: 20px 0;
+    overflow:hidden;
   }
-  span {
+  a {
+    text-decoration: none;
+    color: $black;
     position: absolute;
     display: block;
     bottom: 0;
@@ -366,7 +370,7 @@ News Section
       transition-duration: 300ms;
     }
   }
-  span i {
+  a i {
     color: $red;
   }
 }
@@ -376,7 +380,7 @@ News Section
   right: 0;
   margin: 3rem auto 0 auto;
 
-  padding: 10px 12px;
+  padding: 10px 18px;
   color: #fff;
 
   background-color: $darkBrown;
@@ -394,34 +398,64 @@ News Section
 
 /* 
 ========================================
-About Section
+Publications Section
 ========================================
 */
-.about-section {
+.publication-section {
   height: 400px;
   width: 100%;
-  background: url('../images/crossroads.jpg');
+  background: url('../images/newbanner1.jpg');
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about__container {
+.publication__container {
   height: 95%;
   display: grid;
   padding-bottom: 25px;
 }
-.about__box {
+.publication__box {
   justify-self: center;
   align-self: end;
 
   width: 300px;
   height: 250px;
-  background: $white;
-  color: $red;
-  padding: 40px;
+  background: $lightBrown;
+  color: $black;
+  padding: 20px 10px;
   display: flex;
+  flex-direction: column;
+  h3 {
+    color: $red;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+.publication__list {
+  list-style: none;
+  text-decoration: none;
+  li {
+    margin: 5px;
+    background-color: $white;
+
+    a {
+      color: $black;
+      width: 100%;
+      display: block;
+      padding: 8px 14px;
+    }
+    &:hover {
+      background-color: $darkBrown;
+      color: $white;
+      transition-duration: 300ms;
+      cursor: pointer;
+      a {
+        color: $white;
+      }
+    }
+  }
 }
 
 /* 
@@ -453,20 +487,28 @@ Contact Section
   justify-self: end;
   align-self: end;
   z-index: 1;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 300px;
   background: $red;
 
   display: flex;
 }
 
 .contact__text {
-  padding: 20px;
+  padding: 5px;
   width: 95%;
   background: $white;
+  line-height: 1rem;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+
+  h3 {
+    margin-bottom: 0px;
+    color: $red;
+    font-size: 1rem;
+  }
 }
 
 /* 
@@ -550,14 +592,21 @@ Media Queries
 */
 
 @media (min-width: 480px) {
-  .about__box {
+  .publication__box {
     width: 450px;
     height: 250px;
   }
 
+  .carousel__indicator {
+    width: 70px;
+  }
   .contact__box {
     height: 300px;
     width: 200px;
+  }
+  .contact__text {
+    padding: 10px;
+    line-height: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -610,26 +659,34 @@ Media Queries
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
   }
-  .about__container {
+  .publication__container {
     width: 90%;
     padding-bottom: 0px;
   }
-  .about__box {
+  .publication__box {
     justify-self: end;
     align-self: center;
     margin: 0;
     width: 350px;
     height: 300px;
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .publication__list {
+    li {
+      margin: 10px;
+      a {
+        padding: 10px 14px;
+      }
+    }
   }
 
   .contact__container {
     justify-self: center;
     align-self: center;
     width: 90%;
-  }
-
-  .social-media__container {
-    justify-content: flex-end;
   }
 }
 
@@ -641,20 +698,32 @@ Media Queries
     width: 95%;
   }
 
-  .about__container {
-    width: 75%;
+  .publication__container {
+    width: 90%;
   }
-  .about__box {
+  .publication__box {
     width: 450px;
-    height: 350px;
+    h3 {
+      margin: 20px;
+    }
   }
 
   .contact__container {
-    width: 75%;
+    width: 90%;
   }
   .contact__box {
     height: 350px;
     width: 300px;
+  }
+
+  .contact__text {
+    padding: 20px;
+
+    h3 {
+      margin-bottom: 30px;
+      color: $red;
+      font-size: 1.5rem;
+    }
   }
 }
 @media (min-width: 1200px) {
@@ -665,14 +734,14 @@ Media Queries
   .carousel__text {
     width: 70%;
     background: transparent;
-    top: 25%;
+    top: 30%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
 
     h1,
     h2,
-    span {
+    a {
       grid-column: 2/3;
       text-align: left;
       justify-self: start;
@@ -682,27 +751,21 @@ Media Queries
   .thumbnail-container {
     width: 90%;
   }
-  .about__container {
-    width: 55%;
+  .publication__container {
+    width: 85%;
   }
 
-  .about__box {
+  .publication__box {
     width: 550px;
   }
 
   .contact__container {
-    width: 55%;
+    width: 85%;
   }
-  .contact__box {
-    width: 320px;
-  }
+
   .social-media__container {
     width: 55%;
     margin: 0 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
   }
 }
 
@@ -713,6 +776,15 @@ Media Queries
   .thumbnail-container {
     width: 70%;
   }
+  .publication__container {
+    width: 67%;
+  }
+  .contact__container {
+    width: 67%;
+  }
+  .contact__box {
+    width: 320px;
+  }
 }
 @media (min-width: 2100px) {
   header {
@@ -720,5 +792,12 @@ Media Queries
   }
   .thumbnail-container {
     width: 50%;
+  }
+
+  .publication__container {
+    width: 47%;
+  }
+  .contact__container {
+    width: 47%;
   }
 }
