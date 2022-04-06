@@ -28,7 +28,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* 
@@ -353,7 +353,7 @@ News Section
   }
   p {
     padding: 20px 0;
-    overflow:hidden;
+    overflow: hidden;
   }
   a {
     text-decoration: none;
@@ -421,7 +421,7 @@ Publications Section
   align-self: end;
 
   width: 300px;
-  height: 250px;
+  height: min-content;
   background: $lightBrown;
   color: $black;
   padding: 20px 10px;
@@ -429,7 +429,7 @@ Publications Section
   flex-direction: column;
   h3 {
     color: $red;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: center;
   }
 }
@@ -444,7 +444,7 @@ Publications Section
       color: $black;
       width: 100%;
       display: block;
-      padding: 8px 14px;
+      padding: 8px 10px;
     }
     &:hover {
       background-color: $darkBrown;
@@ -595,6 +595,9 @@ Media Queries
   .publication__box {
     width: 450px;
     height: 250px;
+    h3 {
+      margin-bottom: 12px;
+    }
   }
 
   .carousel__indicator {
@@ -669,9 +672,6 @@ Media Queries
     margin: 0;
     width: 350px;
     height: 300px;
-    h3 {
-      margin-bottom: 10px;
-    }
   }
 
   .publication__list {

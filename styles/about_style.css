@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 main {
@@ -210,6 +210,7 @@ About Section
 
 .about-section h1 {
   padding: 1rem 0;
+  margin-bottom: 2rem;
   color: #ae0404;
 }
 

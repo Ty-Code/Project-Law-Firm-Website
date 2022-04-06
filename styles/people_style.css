@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 main {
@@ -353,6 +353,7 @@ CV Box
 
 .cv-box__article h2 {
   margin: 30px 0;
+  font-weight: 300;
 }
 
 .cv-box__article h3 {
@@ -535,19 +536,12 @@ Media Queries
   nav a:hover {
     text-underline-offset: 1rem;
   }
+  .people-section {
+    margin-top: -200px;
+  }
   .cv-thumbnail {
     grid-column: span 2;
     max-width: 400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .cv-box {
     width: 100%;
@@ -610,9 +604,6 @@ Media Queries
   header {
     padding: 0.7rem 15%;
   }
-  .people-section p {
-    width: 70%;
-  }
   .thumbnail__container {
     width: 70%;
   }
@@ -624,9 +615,6 @@ Media Queries
 @media (min-width: 2100px) {
   header {
     padding: 0.7rem 20%;
-  }
-  .people-section p {
-    width: 50%;
   }
   .thumbnail__container {
     width: 50%;

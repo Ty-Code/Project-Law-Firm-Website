@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* 
@@ -214,7 +214,6 @@ Sidebar
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5px;
 }
 
 .sidebar-menu li {
@@ -249,8 +248,9 @@ Areas Section
 
 .areas-section h1 {
   padding: 0.5rem 0;
+  margin-bottom: 2rem;
   color: #ae0404;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .areas-section p {
@@ -278,6 +278,7 @@ Areas Section
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 1.5rem;
 }
 
 /* 
@@ -442,19 +443,8 @@ Media Queries
   nav a:hover {
     text-underline-offset: 1rem;
   }
-  .cv-box {
-    grid-column: span 2;
-    max-width: 400px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .sidebar-container {
+    padding: 5px;
   }
   .areas-section {
     padding: 2rem;

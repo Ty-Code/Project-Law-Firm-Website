@@ -13,8 +13,7 @@ function creator(article) {
   element.innerHTML = String.raw`
     <h5>${article.date}</h5>
     <h3>${article.title}</h3>
-    ${article.text.slice(0, 120)}...
-    <h5>${article.Writer}</h5>`;
+    ${article.text.slice(0, 120)}...`;
 
   return element;
 }

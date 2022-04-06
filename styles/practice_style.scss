@@ -28,7 +28,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 /* 
@@ -196,7 +196,6 @@ Sidebar
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 5px;
 }
 
 .sidebar-menu li {
@@ -226,8 +225,9 @@ Areas Section
 
   h1 {
     padding: 0.5rem 0;
+    margin-bottom: 2rem;
     color: $red;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   p {
     padding: 0.5rem 0;
@@ -242,6 +242,7 @@ Areas Section
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    line-height: 1.5rem;
   }
 }
 
@@ -375,13 +376,8 @@ Media Queries
     }
   }
 
-  .cv-box {
-    grid-column: span 2;
-    max-width: 400px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .sidebar-container {
+    padding: 5px;
   }
 
   .areas-section {

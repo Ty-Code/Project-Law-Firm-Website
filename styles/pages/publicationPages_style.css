@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 main {
@@ -223,6 +223,7 @@ Text Section
 
 .text-box h2 {
   margin: 30px 0 5px 0;
+  font-size: 1.3rem;
 }
 
 .text-box h3 {
@@ -235,13 +236,13 @@ Text Section
 .text-box div > * {
   padding: 10px 5px;
   line-height: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   list-style-position: inside;
 }
 
 .text-box div > * strong {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .text-box div > * li {
@@ -255,6 +256,19 @@ Text Section
 .text-box div > * li::before {
   content: '';
   margin-left: -4px;
+}
+
+#language-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#language-btn a {
+  display: block;
+  float: left;
+  border-bottom: 3px solid #ae0404;
+  font-weight: 400;
+  color: #000;
 }
 
 /* 
@@ -379,9 +393,6 @@ Media Queries
 @media (min-width: 768px) {
   h1 {
     font-size: 2.4rem;
-  }
-  h2 {
-    font-size: 1.9rem;
   }
   header {
     padding: 0.7rem 1%;
