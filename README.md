@@ -1,6 +1,6 @@
-# Project-lawfirm-website
+# Project-newWebsite
 
-This project will be a fully-fledged website. It will consist of different components and modules.
+This project will be a fully-fledged website for a startup law firm. It will consist of different components and modules.
 
 * in order to set up a responsive layout, both grid and flexbox models were used in various combinations.
 * builded a carousel at the homepage with pure js from scratch.
